@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'tty-prompt'
+Dir['./lib/parent/*.rb'].each { |file| require file }
+Dir['./lib/**/*.rb'].each { |file| require file }
+
+Application.new.start
