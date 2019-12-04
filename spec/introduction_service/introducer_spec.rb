@@ -11,7 +11,8 @@ RSpec.describe IntroductionService::Introducer, type: :model do
     expect(@prompt)
       .to receive(:warn)
       .with("You're currently running v#{BowlingScoring::VERSION}")
-    allow(@prompt).to receive(:yes?).with('Do you want to continue?') { continues }
+    allow(@prompt)
+      .to receive(:yes?).with('Do you want to continue?') { continues }
   end
 
   it 'user continues' do
