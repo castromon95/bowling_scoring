@@ -73,8 +73,12 @@ RSpec.describe Application, type: :model do
     integration_test('two_simple_lines.txt')
   end
 
-  it 'integration two simple lines' do
+  it 'integration a complex line' do
     integration_test('complex_line.txt')
+  end
+
+  it 'integration two complex lines' do
+    integration_test('two_complex_lines.txt')
   end
 
   it 'rescues custom errors' do
